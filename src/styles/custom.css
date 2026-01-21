@@ -20,11 +20,26 @@ h1, h2, h3, h4 {
   letter-spacing: -0.5px;
 }
 
-/* ===== NAVBAR (PREMIUM) ===== */
+/* ===== NAVBAR (FIXED & PREMIUM) ===== */
 .navbar-custom {
-  height: 70px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 72px; /* instead of height */
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  z-index: 1050;
+}
+
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: #111827;
 }
 
 .navbar-logo {
@@ -32,39 +47,81 @@ h1, h2, h3, h4 {
   width: auto;
 }
 
+/* Nav links */
+.navbar-nav {
+  align-items: center;
+}
+
 .navbar-nav .nav-link {
   font-weight: 500;
   color: #374151;
-  margin-left: 20px;
-  transition: color 0.2s ease;
+  margin-left: 22px;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.25s ease;
 }
 
 .navbar-nav .nav-link:hover {
   color: #4f46e5;
 }
 
-/* Active link */
-.navbar-nav .nav-link.active {
-  color: #4f46e5;
-  font-weight: 600;
+/* Active link underline */
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4f46e5;
+  border-radius: 10px;
 }
 
 /* Contact button */
 .navbar-nav .btn {
-  border-radius: 30px;
+  margin-left: 24px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 500;
 }
 
-/* Mobile polish */
-@media (max-width: 768px) {
+/* Toggler */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: #ffffff;
+    margin-top: 12px;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  }
+
   .navbar-nav {
-    padding-top: 12px;
+    align-items: flex-start;
   }
 
   .navbar-nav .nav-link {
     margin-left: 0;
     padding: 10px 0;
+    width: 100%;
+  }
+
+  .navbar-nav .btn {
+    margin-left: 0;
+    margin-top: 12px;
+    width: 100%;
+    text-align: center;
   }
 }
+
 
 /* =========================
    HERO SECTION
