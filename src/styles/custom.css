@@ -20,6 +20,51 @@ h1, h2, h3, h4 {
   letter-spacing: -0.5px;
 }
 
+/* ===== NAVBAR (PREMIUM) ===== */
+.navbar-custom {
+  height: 70px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+}
+
+.navbar-logo {
+  height: 38px;
+  width: auto;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #374151;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4f46e5;
+}
+
+/* Active link */
+.navbar-nav .nav-link.active {
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+/* Contact button */
+.navbar-nav .btn {
+  border-radius: 30px;
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .navbar-nav {
+    padding-top: 12px;
+  }
+
+  .navbar-nav .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+}
 
 /* =========================
    HERO SECTION
