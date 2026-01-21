@@ -1,0 +1,23 @@
+/* Prevent content from hiding under fixed navbar */
+body {
+  padding-top: 72px; /* navbar height */
+}
+.navbar {
+  z-index: 1050; /* higher than page content */
+}
+
+/* Mobile menu background */
+.navbar-collapse {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
